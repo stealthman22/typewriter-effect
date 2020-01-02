@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    height: 100vh;
+    width: 100vw;
+    background: #333 url('./img//one-world-trade-center-under-cloudy-sky-during-daytime-161963.jpg')
+}
