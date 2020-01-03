@@ -38,6 +38,13 @@ h2 {
 }
 
 
+/* Cursor */
+
+.txt-type>.txt {
+    border-right: 0.2rem solid #000;
+}
+
+
 /* Breakpoints */
 
 @media(min-width: 1200px) {
