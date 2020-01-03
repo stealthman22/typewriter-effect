@@ -20,6 +20,7 @@ body {
     align-items: center;
     height: 100%;
     padding: 0 3rem;
+    margin: 0 auto;
 }
 
 h1,
@@ -37,11 +38,44 @@ h2 {
     color: #030303;
 }
 
+.txt-type {
+    margin: 0 auto;
+    animation: typing steps(40, end)
+}
+
+@keyframes typing {
+    from {
+        width: 0%
+    }
+    to {
+        width: 100%
+    }
+}
+
 
 /* Cursor */
 
 .txt-type>.txt {
     border-right: 0.2rem solid #000;
+    animation: cursor .8s step-end infinite
+}
+
+@keyframes cursor {
+    0% {
+        border-color: transparent
+    }
+    20% {
+        border-color: #000
+    }
+    50% {
+        border-color: #000
+    }
+    70% {
+        border-color: #000
+    }
+    100% {
+        border-color: #000
+    }
 }
 
 

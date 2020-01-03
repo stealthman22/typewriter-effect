@@ -111,7 +111,7 @@ class TypeWriter {
         this.txtElement.innerHTML = `<span class="txt">${this.txt}</span>`;
 
         // Initial Type Speed
-        let typeSpeed = 300;
+        let typeSpeed = 200;
 
         // Deleting typespeed
         if (this.isDeleting) {
@@ -119,7 +119,7 @@ class TypeWriter {
         }
 
         // If word is complete
-        if (!this.isDeleting && this.txt === fullTxt) {
+        /* if (!this.isDeleting && this.txt === fullTxt) {
             // Make pause at end
             typeSpeed = this.wait;
             // Set delete to true
@@ -131,8 +131,21 @@ class TypeWriter {
             this.wordIndex++;
             // Pause before start typing
             typeSpeed = 500;
-        }
+        } */
 
+
+        if (!this.isDeleting && this.txt === fullTxt) {
+            // Make pause at end
+            typeSpeed = this.wait;
+            // Set delete to true
+            this.isDeleting = true;
+        } else if (this.isDeleting && this.txt === '') {
+            this.isDeleting = false;
+            // Move to next word
+            this.wordIndex++;
+            // Pause before start typing
+            typeSpeed = 200;
+        }
 
         setTimeout(() => this.type(), typeSpeed);
     }
