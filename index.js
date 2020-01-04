@@ -76,6 +76,16 @@ function init() {
 }
  */
 
+// init App
+function init() {
+    const txtElement = document.querySelector('.txt-type');
+    // convert from string to objects
+    const words = JSON.parse(txtElement.getAttribute('data-words'));
+    const wait = txtElement.getAttribute('data-wait');
+
+    // init Typewriter
+    new TypeWriter(txtElement, words, wait)
+}
 
 // Using ES6 Class Syntax
 
@@ -155,16 +165,8 @@ class TypeWriter {
 // init on DOM Load
 document.addEventListener('DOMContentLoaded', init);
 
-// init App
-function init() {
-    const txtElement = document.querySelector('.txt-type');
-    // convert from string to objects
-    const words = JSON.parse(txtElement.getAttribute('data-words'));
-    const wait = txtElement.getAttribute('data-wait');
 
-    // init Typewriter
-    new TypeWriter(txtElement, words, wait)
-}
+
 
 /*
 
